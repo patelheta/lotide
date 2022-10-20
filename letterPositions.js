@@ -21,6 +21,16 @@ const eqArrays = function (actualArrays, expectedArrays) {
   return true;
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => should PASS
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
+const letterPositions = function (sentence) {
+  const results = {};
+  for (let i = 0; i < sentence.length; i++) {
+    if (results[sentence[i]]) {
+      results[sentence[i]].push(i);
+    } else {
+      results[sentence[i]] = [i];
+    }
+  }
+  return results;
+};
+
+assertArraysEqual(letterPositions("hello").e, [1]);

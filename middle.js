@@ -21,16 +21,17 @@ const assertArraysEqual = function (actualArray, expectedArray) {
   }
 };
 
-const without = function (source, itemsToRemove) {
-  let newArray = [];
-  for (let items of source) {
-    if (!itemsToRemove.includes(items)) {
-      newArray.push(items);
-    }
+const middle = function (middleArray) {
+  let arrayLength = middleArray.length;
+  if (middleArray.length === 1 || middleArray.length === 2) {
+    return [];
+  } else if (middleArray.length % 2 !== 0) {
+    let mid = Math.floor(arrayLength / 2);
+    return [middleArray[mid]];
+  } else if (middleArray.length % 2 === 0) {
+    let mid = arrayLength / 2;
+    return [middleArray[mid], middleArray[mid - 1]];
   }
-  return newArray;
 };
 
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]); // => should PASS
-assertArraysEqual(without([1, 2, 1, 4, 3, 6], [3, 1]), [2, 4, 6]);
-assertArraysEqual(without(["1", "2", "3"], ["1", "2"]), ["3"]);
+assertArraysEqual(middle([1, 2]), []); // => should PASS
