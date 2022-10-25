@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@patelheta-385/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Lotide project is a modular collection of functions that operate on data, namely Arrays and Objects. In creating these functions, we will become more comfortable with FOCAL as well as writing modular code and Automated Testing (by writing unit tests).",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/patelheta/lotide.git"
   },
-  "author": "",
+  "author": "patelheta",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/patelheta/lotide/issues"
