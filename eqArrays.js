@@ -14,4 +14,3 @@ const eqArrays = function(actualArrays, expectedArrays) {
 };
 
 module.exports = eqArrays;
-
